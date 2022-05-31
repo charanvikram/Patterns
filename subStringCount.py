@@ -1,21 +1,16 @@
-x ='ababababa'
-sub = 'aba'
-count=0
-c,i,j=0,0,0
-while(i<len(x) and j<len(sub)):
-    if(x[i]==sub[j] and j<3):
-        i+=1
-        j+=1
-        c+=1
-    else:
-        i+=1
-        j=0
-        c=0
-    if c==len(sub):
+string = input()
+
+sub_string = input()
+count = 0
+
+for i in range(len(string)-len(sub_string)+1):
+    j=0
+    for k in range(len(sub_string)):
+        if string[i+j] == sub_string[k]:
+            j+=1
+        else:
+            break
+    if j==len(sub_string):
         count+=1
-    
-    
-print(count)
-        
-                
+print(sub_string,'repeated for',count,'times')
             
