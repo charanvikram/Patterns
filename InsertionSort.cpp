@@ -20,7 +20,7 @@ int main()
         }
         arr[j+1] = temp;
     }
-    
+  // this for loop is for printing array elements  
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
